@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 using System.Windows.Input;
 
 namespace BillingManagement.UI.ViewModels.Commands
@@ -9,6 +10,7 @@ namespace BillingManagement.UI.ViewModels.Commands
     {
         private readonly Predicate<T> _canExecute;
         private readonly Action<T> _execute;
+        private Action<object, RoutedEventArgs> exit_Click;
 
         public DelegateCommand(Action<T> execute)
             : this(execute, null)
@@ -21,8 +23,13 @@ namespace BillingManagement.UI.ViewModels.Commands
             _canExecute = canExecute;
         }
 
-        public DelegateCommand()
+        public DelegateCommand(object exit_Click)
         {
+        }
+
+        public DelegateCommand(Action<object, RoutedEventArgs> exit_Click)
+        {
+            this.exit_Click = exit_Click;
         }
 
         public bool CanExecute(object parameter)

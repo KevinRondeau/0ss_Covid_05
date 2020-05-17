@@ -27,7 +27,7 @@
                     <Separator/>
                     <MenuItem Header="_Nouveau client"/>
                     <Separator/>
-                    <MenuItem Header="_Quitter" Click="Exit_Click"/>
+                    <MenuItem Header="_Quitter" Command="{Binding ExitApp}"/>
                 </MenuItem>
                 <MenuItem Header="_Édition">
                     <MenuItem Header="Couper..."/>

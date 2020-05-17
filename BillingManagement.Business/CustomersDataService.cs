@@ -138,7 +138,7 @@ namespace BillingManagement.Business
 
         public IEnumerable<Customer> GetAll()
         {
-            foreach (Customer c in customers)
+            foreach (Customer c in customers.OrderBy(c=>c.Info))
             {
                 yield return c;
             }
