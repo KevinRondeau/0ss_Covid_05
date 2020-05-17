@@ -10,7 +10,6 @@ namespace BillingManagement.Models
     public class Invoice : INotifyPropertyChanged
     {
         static int nextId;
-
         public int InvoiceId { get; private set; }
 
         public DateTime CreationDateTime { get; private set; }

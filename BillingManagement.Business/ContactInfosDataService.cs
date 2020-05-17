@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BillingManagement.Business
 {
-    class ContactInfosDataService : IDataService<ContactInfo>
+    public class ContactInfosDataService : IDataService<ContactInfo>
     {
         List<ContactInfo> contactInfos;
 
